@@ -8,24 +8,110 @@
 @import "base/common";
 @import "base/helpers";
 
-.boilerplate {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.red {
-  background-color: red;
+// COLORS
+
+/* HSL */
+$color1: hsla(285%, 31%, 5%, 1);
+$color2: hsla(344%, 88%, 88%, 1);
+$color3: hsla(7%, 71%, 95%, 1);
+$color4: hsla(44%, 82%, 98%, 1);
+$color5: hsla(192%, 59%, 80%, 1);
+
+/* RGB */
+$color1: rgba(12, 9, 13, 1);
+$color2: rgba(224, 26, 79, 1);
+$color3: rgba(241, 89, 70, 1);
+$color4: rgba(249, 194, 46, 1);
+$color5: rgba(83, 179, 203, 1);
+
+/* HEX */
+$color1: #0c090dff;
+$color2: #e01a4fff;
+$color3: #f15946ff;
+$color4: #f9c22eff;
+$color5: #53b3cbff;
+
+/* GRADIENT */
+$gradient-top: linear-gradient(0deg, #0c090dff, #e01a4fff, #f15946ff, #f9c22eff, #53b3cbff);
+$gradient-right: linear-gradient(90deg, #0c090dff, #e01a4fff, #f15946ff, #f9c22eff, #53b3cbff);
+$gradient-bottom: linear-gradient(180deg, #0c090dff, #e01a4fff, #f15946ff, #f9c22eff, #53b3cbff);
+$gradient-left: linear-gradient(270deg, #0c090dff, #e01a4fff, #f15946ff, #f9c22eff, #53b3cbff);
+$gradient-top-right: linear-gradient(45deg,#0c090dff, #e01a4fff, #f15946ff, #f9c22eff, #53b3cbff);
+$gradient-bottom-right: linear-gradient(135deg, #0c090dff, #e01a4fff, #f15946ff, #f9c22eff, #53b3cbff);
+$gradient-top-left: linear-gradient(225deg, #0c090dff, #e01a4fff, #f15946ff, #f9c22eff, #53b3cbff);
+$gradient-bottom-left: linear-gradient(315deg, #0c090dff, #e01a4fff, #f15946ff, #f9c22eff, #53b3cbff);
+$gradient-radial: radial-gradient(#0c090dff, #e01a4fff, #f15946ff, #f9c22eff, #53b3cbff);
+
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap&subset=latin-ext');
+
+$base-font : 'Montserrat', sans-serif;
+
+body {
+    font-family: $base-font;
+    font-size: 14px;
+    .top-bg {
+        background-color: $color5;
+        color: white;
+        p > a {
+            color: white;
+        }
+        .sosyal a {
+            color: white;
+            font-size: 20px;
+            padding-right: 8px;
+            .fa-facebook-square {
+                &:hover {
+                    color: #3b5998;
+                }
+            }
+            .fa-instagram {
+                &:hover {
+                color: #517fa4;
+                }
+            }
+            .fa-twitter-square {
+                &:hover {
+                    color: #00aced;
+                }
+            }
+        }
+    }
+    #menu {
+        font-weight: 600;
+        font-size: 14;
+    }
 }
 
-.penrose {
-  height: 8em;
-  width: auto;
-  margin: 1em;
+.dropdown {
+    .mega-menu {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+}
+.mega-area {
+    position: static;
+}
+.mega-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    border-radius: 0;
+ }
+
+
+.dropdown-item {
+    padding: 2px 0;
+    width: 100%;
+    white-space: normal;
+    
+    &:hover {
+        background-color: transparent;
+        color: $color5;
+        transition: all .3s ease-in;
+    }
 }
 
-.ultra >p {
-  font-family: "Ultra", serif;
-  font-size: 1.4em;
-}
+
